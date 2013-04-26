@@ -11,7 +11,7 @@ How To Install
 
 .. code-block:: bash
 
-    django-admin.py startproject --template=https://github.com/gilsondev/django-heroku-template/zipball/master --extension=py,md,dev --name Procfile project_name
+    django-admin.py startproject --template=https://github.com/gilsondev/django-heroku-template/zipball/master --extension=py,rst,dev --name Procfile project_name
 
 
 =========================================
