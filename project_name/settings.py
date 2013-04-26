@@ -183,3 +183,6 @@ LOGGING = {
         },
     }
 }
+
+# South
+SKIP_SOUTH_TESTS = True
