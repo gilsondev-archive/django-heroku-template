@@ -26,9 +26,9 @@ Dependencies
 * pytest-django==2.3.0
 
 
-==========================================
+------------------------------------------
 Using bootstrap-django-heroku
-==========================================
+------------------------------------------
 
 `bootstrap-django-heroku`_ is a fork of the `virtualenv-bootstrap`_ which creates the virtual environment and installs the dependencies in the file requirements.txt in the folder bootstrap.
 
