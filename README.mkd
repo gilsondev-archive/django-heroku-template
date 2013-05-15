@@ -1,0 +1,60 @@
+# Virtualenv Bootstrap Django
+
+The best way to have people contributing to your project is to make easy for them to just **checkout** and **run**.
+
+Virtualenv Bootstrap helps your contributor to just setup a django development environment for Heroku, with just one command:
+
+1.  Clone the repository:
+
+        git clone [your repo]
+
+
+2.  Bootstrap the development environment:
+
+        python bootstrap
+
+It works based on built-in [Virtualenv][] capabilities, but it's completely isolated. Perfect even for newcommers who don't still have or understand Python Packaging tools.
+
+## How it works?
+
+Virtualenv Bootstrap detects your current python interpreter and:
+
+1. Creates a [Virtualenv][] for your project;
+2. Installs [Distribute][];
+3. Installs your [requirements.txt][] at your bootstrap root and install all your dependencies with [Pip][];
+4. Setups a simple [postactivate][] file for those who use [Virtualenvwrapper][];
+
+## Dependencies
+
+ - Django==1.5.1
+ - South==0.7.6
+ - Unipath==1.0
+ - distribute==0.6.34
+ - dj-database-url==0.2.1
+ - gunicorn==0.17.4
+
+
+## How to extend it?
+
+You might want to automate some other tasks to make the setup of complex projects really easy, like:
+
+- generate project structure using django project templates
+- detecting presence of services your project needs
+- etc.
+
+For that, just add your own commands to the function `after_install` on your `bootstrap/hook.py`.
+
+## License
+
+Licensed under an [MIT-style permissive license].
+
+> *Bad Note: for now it only supports python 2.6 and 2.7*
+
+ [Virtualenv]: http://www.virtualenv.org/en/latest/index.html
+ [Distribute]: http://packages.python.org/distribute/
+ [postactivate]: http://virtualenvwrapper.readthedocs.org/en/latest/scripts.html#postactivate
+ [Virtualenvwrapper]: http://virtualenvwrapper.readthedocs.org
+ [requirements.txt]: http://www.pip-installer.org/en/latest/requirements.html
+ [Pip]: http://www.pip-installer.org
+ [MIT-style permissive license]: https://github.com/henriquebastos/virtualenv-bootstrap/blob/master/LICENSE.txt
+
